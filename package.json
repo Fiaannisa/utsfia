@@ -1,0 +1,25 @@
+{
+  "name": "utsfia",
+  "version": "1.0.0",
+  "description": "project uts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fiaannisa/utsfia.git"
+  },
+  "keywords": [
+    "rest",
+    "api",
+    "node",
+    "js"
+  ],
+  "author": "fia",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fiaannisa/utsfia/issues"
+  },
+  "homepage": "https://github.com/Fiaannisa/utsfia#readme"
+}
