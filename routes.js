@@ -32,24 +32,4 @@ module.exports = function(app) {
 
     app.route('/tambahlevel')
     .post(jsonku.tambahlevel);
-
-    app.route('/tambahservice')
-    .post(jsonku.tambahservice);
-
-    app.route('/ubahmontir')
-    .put(jsonku.ubahmontir);
-
-    app.route('/ubahsparepart')
-    .put(jsonku.ubahsparepart);
-
-    app.route('/ubahuser')
-    .put(jsonku.ubahuser);
-
-    app.route('/ubahlevel')
-    .put(jsonku.ubahlevel);
-
-    app.route('/ubahservice')
-
-
-    
 }
