@@ -194,10 +194,24 @@ exports.ubahmontir = function (req, res) {
         });
 };
 
-//menambahkan data level
-exports.ubahlevel = function (req, res) {
-    var id_level = req.body.id_level;
-    var nama_level = req.body.nama_level;
+
+//mengubah data User
+exports.ubahuser = function (req, res) {
+    var id_user = req.body.id_user;
+    var nama_user = req.body.nama_user;
+    var email = req.body.email;
+    var password = req.body.password;
     var role = req.body.role;
+    var tanggal_daftar = new Date();
     
-    
+
+    connection.query('UPDATE t_user SET nama_user=?, email=?, password=?, role=?, tanggal_daftar=? WHERE id_user=?',
+     [nama_user, email, password, role, tanggal_daftar, id_user],
+    function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Mengubah Data Montir", res)
+            }
+        });
+};
