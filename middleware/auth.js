@@ -65,7 +65,7 @@ exports.login = function(req,res){
                 id_user = rows[0].id_user;
 
                 var data = {
-                    id_user: id_user,
+                    id_user: id,
                     access_token: token,
                     ip_address: ip_address()
                 }
@@ -85,9 +85,14 @@ exports.login = function(req,res){
                          });
                     }
                 });
-            }else{
+            }
+            else{
                  res.json({"Error": true, "Message":"Email atau Password salah !"});
             }
         }
     });
+}
+
+exports.halamanrahasia = function(req,res){
+    response.ok("Halaman ini hanya untuk user dengan role = 2!",res);
 }
