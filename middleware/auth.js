@@ -2,7 +2,7 @@ var connection = require('../koneksi');
 var mysql = require('mysql');
 var md5 = require('MD5');
 var response = require('../res');
-var jwt = require('../jsonwebtoken');
+var jwt = require('jsonwebtoken');
 var config = require('../config/secret');
 var ip = require('ip');
 
@@ -16,7 +16,7 @@ exports.registrasi = function(req,res){
             tanggal_daftar: new Date()
     }
 
-    var query = "SELECT email FROM ?? WHERE";
+    var query = "SELECT email FROM ?? WHERE ??=?";
     var table = ["t_user", "email",post.email];
 
     query = mysql.format(query,table);
