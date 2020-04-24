@@ -176,3 +176,28 @@ exports.ubahsparepart = function (req, res) {
         });
 };
 
+//mengubah data Montir
+exports.ubahmontir = function (req, res) {
+    var id_montir = req.body.id_montir;
+    var nama_montir = req.body.nama_montir;
+    var harga_perjam = req.body.harga_perjam;
+    
+
+    connection.query('UPDATE t_montir SET nama_montir=?, harga_perjam=? WHERE id_montir=?',
+     [nama_montir, harga_perjam, id_montir],
+    function (error, rows, fields) {
+            if (error) {
+                console.log(error);
+            } else {
+                response.ok("Berhasil Mengubah Data Montir", res)
+            }
+        });
+};
+
+//menambahkan data level
+exports.ubahlevel = function (req, res) {
+    var id_level = req.body.id_level;
+    var nama_level = req.body.nama_level;
+    var role = req.body.role;
+    
+    
