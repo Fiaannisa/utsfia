@@ -9,8 +9,8 @@ module.exports = function(app) {
     app.route('/tampil')
     .get(jsonku.tampildatasparepart);
 
-    app.route('/tampilservice')
-    .get(jsonku.tampilservice);
+    app.route('/tampilservis')
+    .get(jsonku.tampilservis);
 
     app.route('/tampilmontir')
     .get(jsonku.tampildatamontir);
@@ -44,4 +44,26 @@ module.exports = function(app) {
 
     app.route('/ubahuser')
     .put(jsonku.ubahuser);
+
+    app.route('/ubahlevel')
+    .put(jsonku.ubahlevel);
+
+    app.route('/ubahservis')
+    .put(jsonku.ubahservis);
+
+
+    app.route('/hapusmontir')
+    .delete(jsonku.hapusMontir);
+
+    app.route('/hapussparepart')
+    .delete(jsonku.hapusSparepart);
+
+    app.route('/hapususer')
+    .delete(jsonku.hapusUser);
+
+    app.route('/hapusservis')
+    .delete(jsonku.hapusServis);
+
+    app.route('/hapuslevel')
+    .delete(jsonku.hapusLevel);
 }
